@@ -65,7 +65,7 @@
 // loki
 #include "TypeTraits.h"
 
-#include <turbojpeg.h>
+//#include <turbojpeg.h>
 
 #include "vogl_cmdline_opts.h"
 
@@ -4932,6 +4932,7 @@ static bool vogl_screen_capture_callback(uint32_t width, uint32_t height, uint32
 
         mz_free(pPNG_data);
     }
+    /*
     else if (g_command_line_params().get_value_as_bool("vogl_dump_jpeg_screenshots"))
     {
         int jpeg_quality = g_command_line_params().get_value_as_int("vogl_jpeg_quality", 0, 80, 1, 100);
@@ -4961,6 +4962,7 @@ static bool vogl_screen_capture_callback(uint32_t width, uint32_t height, uint32
 
         tjFree(pJPEG_data);
     }
+    */
 
     if (g_command_line_params().get_value_as_bool("vogl_dump_backbuffer_hashes") ||
             g_command_line_params().get_value_as_bool("vogl_hash_backbuffer"))

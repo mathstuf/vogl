@@ -41,7 +41,7 @@ include_directories(
     ${CMAKE_BINARY_DIR}/voglinc
     ${SRC_DIR}/voglcore
     ${SRC_DIR}/libtelemetry
-    ${LibJpegTurbo_INCLUDE}
+    #${LibJpegTurbo_INCLUDE}
 )
 
 # Not sure if -Wl,-Bsymbolic is needed or useful?
@@ -69,7 +69,8 @@ target_link_libraries(${PROJECT_NAME}
     ${CMAKE_THREAD_LIBS_INIT}
     ${CMAKE_DL_LIBS}
     ${X11_LIBRARIES}
-    ${LibJpegTurbo_LIBRARY}
+    #${LibJpegTurbo_LIBRARY}
+    glapi
 )
 
 build_options_finalize()
